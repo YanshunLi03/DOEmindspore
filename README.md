@@ -59,8 +59,6 @@ Test OOD Datasets
 
 - [Textures](https://www.robots.ox.ac.uk/~vgg/data/dtd/)
 
-- [Places365](http://places2.csail.mit.edu/download.html)
-
 - [LSUN-C](https://www.dropbox.com/s/fhtsw1m3qxlwj6h/LSUN.tar.gz)
  
 - [LSUN-R](https://www.dropbox.com/s/moqh2wh8696c3yl/LSUN_resize.tar.gz)
