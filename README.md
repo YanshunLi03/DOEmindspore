@@ -1,6 +1,7 @@
 # Out-of-distribution Detection with Implicit Outlier Transformation --Mindspore
 
-**[Out-of-distribution Detection with Implicit Outlier Transformation For Pytorch]([https://openreview.net/forum?id=hdghx6wbGuD](https://github.com/QizhouWang/DOE))**   (ICLR 2023)
+**[Out-of-distribution Detection with Implicit Outlier Transformation For Pytorch](https://github.com/QizhouWang/DOE)** 
+  
 **[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)**   (ICLR 2023)
 
 Qizhou Wang, Junjie Ye, Feng Liu, Quanyue Dai, Marcus Kalander, Tongliang Liu, Jianye Hao, and Bo Han. 
@@ -29,8 +30,8 @@ url={https://openreview.net/forum?id=hdghx6wbGuD}
 
 ### Environment
 - Python (3.7.10)
-- Pytorch (1.7.1)
 - Mindspore (2.1)
+- Pytorch (1.7.1)
 - torchvision (0.8.2)
 - CUDA
 - Numpy
@@ -78,17 +79,25 @@ After the preparation work, the whole project should have the following structur
 │   ├── cifar10_wrn_pretrained_epoch_99.pt 
 │   └── cifar100_wrn_pretrained_epoch_99.pt
 ├── models                          # models
-│   └── wrn.py
+│   └── models2.py
 ├── utils                           # utils
 │   ├── display_results.py                        
 │   ├── utils_awp.py
 │   └── validation_dataset.py
+├── change_tiny_imagenet_200.py     # change tiny_imagenet_200
 └── doe_final.py                    # training code
+
 ```
 
 
 
 ## Training
+
+To change dataset tiny_imagenet_200, just run:
+
+```change dataset
+python  change_tiny_imagenet_200.py
+```
 
 To train the DOE model on CIFAR benckmarks, simply run:
 
@@ -107,9 +116,9 @@ python doe_final.py cifar100
 
 The key results on CIFAR benchmarks are listed in the following table. 
 
-|     | CIFAR-10 | CIFAR-10 | CIFAR-100 | CIFAR-100 |
-|:---:|:--------:|:--------:|:---------:|:---------:|
-|     |   FPR95  |   AUROC  |   FPR95   |   AUROC   |
-| MSP |   53.77  |   88.40  |   76.73   |   76.24   |
-|  OE |   12.41  |   97.85  |   45.68   |   87.61   |
-| DOE |   **5.15**   |   **98.78**  |   **25.38**   |   **93.97**   |
+|     | CIFAR-10 | CIFAR-10 | 
+|:---:|:--------:|:--------:|
+|     |   FPR95  |   AUROC  |
+| MSP |   53.77  |   88.40  |
+|  OE |   12.41  |   97.85  |
+| DOE |   **5.00**   |   **98.78**  |
